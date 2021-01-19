@@ -904,4 +904,30 @@
 </style>
 <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FULLNAME';ftypes[1]='text';fnames[2]='MMERGE2';ftypes[2]='phone';fnames[3]='COMPANY';ftypes[3]='text';fnames[4]='CSIZE';ftypes[4]='text';fnames[5]='INDUSTRY';ftypes[5]='text';fnames[6]='PURPOSE';ftypes[6]='dropdown';fnames[7]='MESSAGE';ftypes[7]='text';}(jQuery));var $mcj = jQuery.noConflict(true);
 </script>
+
+<!-- Load Facebook SDK for JavaScript -->
+      <div id="fb-root"></div>
+      <script>
+        window.fbAsyncInit = function() {
+          FB.init({
+            xfbml            : true,
+            version          : 'v9.0'
+          });
+        };
+
+        (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));</script>
+
+      <!-- Your Chat Plugin code -->
+      <div class="fb-customerchat"
+        attribution=setup_tool
+        page_id="512077642690034"
+  logged_in_greeting="Hello! How can I help you?"
+  logged_out_greeting="Hello! How can I help you?">
+      </div>
 </body></html>
